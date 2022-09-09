@@ -36,12 +36,22 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <label class="form-label">Upload Invoice Copy</label>
-                                <input type="file" id="uplaodimage" name="uplaodimage" class="form-control" aria-label="file example" accept="application/pdf" >
-                            </div>
+                        <?php //if(){ ?>
+                        <div class="container">
+                            <form id="basic-form" method="post" action="<?php echo base_url().'/candidate/bulk_import'; ?>">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label class="form-label">Upload Invoice Copy</label>
+                                        <input type="file" id="uplaodimage" name="uplaodimage" class="form-control" aria-label="file example" accept="application/xlsl" >
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="submit" class="btn btn-success" value="Submit" style="margin-top: 22px;">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                        <?php //}else{ ?>
+                        <?php //} ?>
                     </div>
                 </div>
             </div>
